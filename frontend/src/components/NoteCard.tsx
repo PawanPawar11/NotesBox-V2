@@ -22,7 +22,9 @@ const NoteCard = ({ note, onDelete }: NoteCardProps) => {
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`http://localhost:5001/api/notes/${note._id}`);
+      await axios.delete(
+        `${import.meta.env.VITE_BACKEND_URL}/api/notes/${note._id}`
+      );
       onDelete();
     } catch (error) {
       console.log("Error occurred while deleting the note: ", error);

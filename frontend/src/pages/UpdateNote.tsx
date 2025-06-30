@@ -22,7 +22,7 @@ const UpdateNote = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5001/api/notes/${id}`
+          `${import.meta.env.VITE_BACKEND_URL}/api/notes/${id}`
         );
         setTitle(response.data.title);
         setDescription(response.data.description);
@@ -43,7 +43,7 @@ const UpdateNote = () => {
     setIsLoading(true);
 
     try {
-      await axios.put(`http://localhost:5001/api/notes/${id}`, {
+      await axios.put(`${import.meta.env.VITE_BACKEND_URL}/api/notes/${id}`, {
         title,
         description,
       });

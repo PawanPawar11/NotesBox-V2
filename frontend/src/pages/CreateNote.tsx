@@ -21,7 +21,7 @@ const CreateNote = () => {
     setIsLoading(true);
 
     try {
-      await axios.post("http://localhost:5001/api/notes", {
+      await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/notes`, {
         title,
         description,
       });

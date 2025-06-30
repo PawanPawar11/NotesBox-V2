@@ -20,9 +20,12 @@ const HomePage = () => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get("http://localhost:5001/api/notes", {
-        withCredentials: true,
-      });
+      const response = await axios.get(
+        `${import.meta.env.VITE_BACKEND_URL}/api/notes`,
+        {
+          withCredentials: true,
+        }
+      );
       setNotes(response.data);
     } catch (error) {
       console.log("Error occurred while fetching data from backend: ", error);
