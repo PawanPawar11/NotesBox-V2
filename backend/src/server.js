@@ -6,11 +6,17 @@ import cors from "cors";
 
 dotenv.config();
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 5001;
 
 const app = express();
 
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://example-frontend-ske5.onrender.com",
+    credentials: true,
+  })
+);
+
 app.use(express.json());
 app.use("/api/notes", notesRoutes);
 
