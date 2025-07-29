@@ -46,7 +46,7 @@ npm install
 npm run dev
 ```
 
-## 🧱 Tech Stack Overview – NotesBox-V2
+## 🧱 Tech Stack Overview
 
 ### 🔧 Backend
 
