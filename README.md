@@ -68,10 +68,10 @@ npm run dev
 
 ## 📊 Architecture & Flow
 
-![Architecture](/assets/architecture.png)
+![Architecture](/assets/Architecture.png)
 
 Architecture
 
-![Flowchart](/assets/flowchart.png)
+![Flowchart](/assets/Flowchart.png)
 
 Flowchart
